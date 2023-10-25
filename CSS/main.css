@@ -1,10 +1,16 @@
 :root{
+/*Una clase es un nombre inventado por nosotros que va a guardar un estilo personalizado*/
+   
     --blanco:#ffffff;
     --oscuro:#212121;
     --primario:#ffc107;
     --secundario:#0097a7;
     --gris:#757575;
 }
+/*Hay formas de utilizar los colores puede ser RGB(RED GREEN BLUE del 0-255),
+ Nombre y por Hexadecimal, existe el HSL que casi no se usa.
+El alpha es la transparencia(0-1) de que se le puede aplicar
+El REM es el tamano de la fuente raiz*/
 
 html{
     font-size: 62.5%;
@@ -24,4 +30,13 @@ body {
 
 .titulo span{
     font-size: 2rem;
+}
+
+.contenedor {
+    width: 120rem;
+    margin: 0 auto;
+}
+
+.nav-bg {
+background-color: var(--secundario);
 }
