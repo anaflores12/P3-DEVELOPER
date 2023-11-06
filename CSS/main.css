@@ -1,5 +1,5 @@
 :root{
-/*Una clase es un nombre inventado por nosotros que va a guardar un estilo personalizado*/
+/*Una pseudoclase es un nombre inventado por nosotros que va a guardar un estilo personalizado*/
    
     --blanco:#ffffff;
     --oscuro:#212121;
@@ -33,10 +33,39 @@ body {
 }
 
 .contenedor {
-    width: 120rem;
+    max-width: 120rem;
     margin: 0 auto;
 }
 
 .nav-bg {
-background-color: var(--secundario);
+    background-color: var(--secundario);
+}
+
+.navegacion-principal {
+    display: flex;
+    flex-direction: column;
+    /*el justify -content sirve para filas (row) y alingn-item para columnas*/
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 2rem;
+
+    
+}
+
+.navegacion-principal a {
+    padding: 1rem;
+    color: var(--blanco);
+    text-decoration: none;
+
+}
+
+.navegacion-principal a:hover{
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
+@media (min-width:768px){
+    .navegacion-principal{
+        flex-direction: row;
+    }
 }
