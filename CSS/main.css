@@ -14,12 +14,33 @@ El REM es el tamano de la fuente raiz*/
 
 html{
     font-size: 62.5%;
-
+    box-sizing: border-box;
 }
 
 body {
     font-size: 16px;
     font-family: 'Krub', sans-serif;
+}
+
+/*TIPOGRAFIAS*/
+h1{
+    font-size: 3.8rem;
+}
+
+h1{
+    font-size: 2.8rem;
+}
+
+h1{
+    font-size: 3.8rem;
+}
+
+h1,h2,h3{
+    text-align: center;
+}
+
+*,*:before,*:after {
+    box-sizing: inherit;
 }
 
 .titulo {
@@ -28,6 +49,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/*TITULOS*/
 .titulo span{
     font-size: 2rem;
 }
@@ -48,7 +70,7 @@ body {
     justify-content: space-between;
     font-weight: bold;
     font-size: 2rem;
-
+    align-items: center;
     
 }
 
@@ -65,7 +87,58 @@ body {
 }
 
 @media (min-width:768px){
-    .navegacion-principal{
+.navegacion-principal{
         flex-direction: row;
     }
 }
+
+/*HEROOOOOO*/
+.hero{
+    background-image: url(../IMG/MicrosoftTeams-image.png); /*../ es para regresar a la carpeta anterior o directorio */
+    background-repeat: no-repeat; /*QUITAR LA REPETICION DE LA IMAGEN*/
+    background-size: cover; /*Cubre toda la pantalla con la imagen*/
+    height: 450px;
+    position: relative; /*el padre debe ser relativo*/
+}
+
+/* el padre es relativo y el hijo absoluto*/
+.contenedor-hero{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .7);
+    width: 100%;
+    height: 100%;
+    display: flex; /*Alinear verticalmente y horizontalmente*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor-hero p , .contenedor-hero h2{
+     color: var(--blanco);
+}
+
+.ubicacion {
+    display: flex;
+    align-items: flex-end;
+}
+
+.boton{
+    background-color: var(--secundario); /*Color de fondo*/
+    text-decoration: none; /*Quitar el subrayado*/
+    padding: 1rem 3rem; /*espacio interior*/
+    border-radius: .5rem; /*Esquinas redondeadas*/
+    color: var(--blanco); /*Color de letra*/
+    margin-top: 3rem; /*Espacio exterior*/
+    font-weight: bold; /*Letras en negritas*/
+    font-size: 2rem; /*Tamaño de letra*/
+    text-transform: uppercase; /*Transformar letras en mayusculas*/
+    text-align: center; /*Centrar texto*/
+    width: 90%; /*Ancho de boton para un dispositivo*/
+}
+
+@media (min-width: 768px) 
+{
+  .boton{
+    width: auto;
+  }
+ }
