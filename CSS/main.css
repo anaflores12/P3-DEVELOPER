@@ -5,7 +5,8 @@
     --oscuro:#212121;
     --primario:#ffc107;
     --secundario:#0097a7;
-    --gris:#757575;
+    --gris:#757575;    
+    --grisClaro:#DFE9F3;
 }
 /*Hay formas de utilizar los colores puede ser RGB(RED GREEN BLUE del 0-255),
  Nombre y por Hexadecimal, existe el HSL que casi no se usa.
@@ -15,11 +16,22 @@ El REM es el tamano de la fuente raiz*/
 html{
     font-size: 62.5%;
     box-sizing: border-box;
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%);
 }
 
 body {
     font-size: 16px;
     font-family: 'Krub', sans-serif;
+    
+}
+
+.sombra{
+    box-shadow: 0px 0px 15px 0px rgba(112,112,112,0.5);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(112,112,112,0.5);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(112,112,112,0.5);
+    background-color: var(--blanco);
+    padding: 2rem; /*bORDER INFERIOR*/
+    border-radius: 1rem; /*bORDER */
 }
 
 /*TIPOGRAFIAS*/
@@ -99,6 +111,8 @@ h1,h2,h3{
     background-size: cover; /*Cubre toda la pantalla con la imagen*/
     height: 450px;
     position: relative; /*el padre debe ser relativo*/
+    margin-bottom: 2rem; /*bORDER INFERIOR para separar*/
+    
 }
 
 /* el padre es relativo y el hijo absoluto*/
@@ -142,3 +156,37 @@ h1,h2,h3{
     width: auto;
   }
  }
+@media (min-width:768px) {
+ .servicios {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /*divide en columnas como en fracciones o se puede  poner repeat (3, 1fr)*/
+    column-gap: 1rem; 
+ }
+}
+
+.servicio{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.servicio h3{
+    color: var(--secundario);
+    font-weight: normal;
+}
+
+.servicio p {
+    line-height: 2; /*interlineado*/
+    text-align: center;
+}
+
+.servicio .iconos {
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
