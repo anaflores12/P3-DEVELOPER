@@ -71,6 +71,28 @@ h1,h2,h3{
     margin: 0 auto;
 }
 
+/*UTILIDADES*/
+
+.w-smm-100{
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+  .w-smm-100 {
+    width: auto;
+  }
+ }
+
+ .flex {
+    display: flex;
+ }
+
+ .alinear-derecha {
+    justify-content: flex-end;
+ }
+
+ /*navegacion principal*/
+
 .nav-bg {
     background-color: var(--secundario);
 }
@@ -148,7 +170,9 @@ h1,h2,h3{
     text-transform: uppercase; /*Transformar letras en mayusculas*/
     text-align: center; /*Centrar texto*/
     width: 90%; /*Ancho de boton para un dispositivo*/
+    border: none;
 }
+
 
 @media (min-width: 768px) 
 {
@@ -156,6 +180,10 @@ h1,h2,h3{
     width: auto;
   }
  }
+.boton:hover{
+    cursor: pointer;
+}
+
 @media (min-width:768px) {
  .servicios {
     display: grid;
@@ -189,4 +217,50 @@ h1,h2,h3{
     justify-content: space-evenly;
     align-items: center;
     
+}
+
+.formulario {
+    background-color: var(--gris);
+    width: min(60 rem, 100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario {
+    border: none;
+}
+
+.formulario {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: var(--primario);
+}
+
+.contenedor-campos {
+/**/
+}
+
+.campo {
+    color: var(--blanco);
+}
+
+.campo label{
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.input-text{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+.campo textarea{
+    height: 20rem;
 }
